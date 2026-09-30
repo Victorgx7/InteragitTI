@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>InteragiTI | Contato</title>
+  <link rel="icon" type="image/x-icon" href="Assets/img/favicon.ico" />
+  <meta name="description"
+    content="Entre em contato com a InteragiTI para falar sobre sistemas, redes e certificados digitais." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=Sora:wght@500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/internal.css" />
+  <link rel="stylesheet" href="css/glass.css" />
+  <link rel="stylesheet" href="css/interactions.css" />
+</head>
+
+<body>
+  <nav class="site-nav" id="siteNav">
+    <div class="container row-flex">
+      <a href="index.html" class="nav-logo nav-logo-original" aria-label="InteragiTI - início"><img
+          src="https://www.interagiti.com.br/site/images/logo-inverse-200x34.png" alt="InteragiTI" /></a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html" class="nav-link-item">Início</a>
+        <a href="sobrenos.html" class="nav-link-item">Sobre</a>
+        <a href="solucoes.html" class="nav-link-item">Sistemas</a>
+        <a href="certificados.html" class="nav-link-item">Certificados</a>
+        <a href="contato.html" class="nav-link-item active">Contato</a>
+        <a href="https://api.whatsapp.com/send?phone=551930131330" target="_blank" rel="noopener"
+          class="mobile-menu-cta btn btn-primary">Falar no WhatsApp <span>→</span></a>
+      </div>
+      <a href="https://api.whatsapp.com/send?phone=551930131330" target="_blank" rel="noopener"
+        class="btn btn-nav">Falar no WhatsApp <span>→</span></a>
+      <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <header class="hero" id="inicio">
+    <div class="container hero-grid">
+      <div class="hero-copy" style="padding-left: 60px; padding-right: 20px;">
+        <p class="eyebrow"><span></span> Atendimento direto & personalizado</p>
+        <h1>Vamos encontrar a solução certa para sua empresa.</h1>
+        <p class="lead">
+          Conte o que você precisa. Nossa equipe retorna rapidamente pelo WhatsApp para
+          entender o cenário e indicar o próximo passo.
+        </p>
+      </div>
+      <div class="hero-actions"
+        style="display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-end; align-self: start; padding-top: 195px; padding-right: 150px;">
+        <div class="hero-ctas" style="margin-top: 125px; flex-direction: column; align-items: flex-end; gap: 10px;">
+          <a href="https://api.whatsapp.com/send?phone=551930131330&text=Olá!%20Gostaria%20de%20falar%20com%20a%20equipe%20da%20InteragiTI."
+            target="_blank" rel="noopener" class="btn btn-primary">Falar no WhatsApp <span>→</span></a>
+          <a href="#contato" class="text-link" style="margin-right: 15px;">Enviar mensagem <span>↓</span></a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-glow"></div>
+  </header>
+
+  <main>
+    <section id="contato">
+      <div class="container-narrow">
+        <div class="section-head">
+          <div class="section-kicker">Contato</div>
+          <h2>Vamos conversar sobre o seu negócio.</h2>
+          <p>
+            Preencha o formulário ou fale direto com a gente pelo WhatsApp.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <form id="contactForm" action="https://api.whatsapp.com/send" method="get" target="_blank">
+            <input type="hidden" name="phone" value="551930131330" />
+            <div class="form-field">
+              <label for="nome">Nome</label>
+              <input class="form-control-custom" type="text" id="nome" name="text"
+                placeholder="Como podemos chamar você?" required />
+            </div>
+            <div class="form-field">
+              <label for="empresa">Empresa</label>
+              <input class="form-control-custom" type="text" id="empresa" name="empresa"
+                placeholder="Nome da empresa" />
+            </div>
+            <div class="form-field">
+              <label for="whatsapp">WhatsApp</label>
+              <input class="form-control-custom" type="tel" id="whatsapp" name="whatsapp" placeholder="(19) 00000-0000"
+                required />
+            </div>
+            <div class="form-field">
+              <label for="mensagem">Como podemos ajudar?</label>
+              <textarea class="form-control-custom" id="mensagem" name="mensagem"
+                placeholder="Fale sobre sistema, certificado, rede ou suporte"></textarea>
+            </div>
+            <button type="submit" class="btn-primary-lg">
+              Enviar no WhatsApp
+            </button>
+          </form>
+
+          <div>
+            <div class="contact-info-block">
+              <div class="contact-info-row">
+                <div class="icon-contact"><img src="Assets/icon/o-email.png" alt="E-mail"></div>
+                <div>
+                  <div class="k">E-mail</div>
+                  <div class="v">interagiti@interagiti.com.br</div>
+                </div>
+              </div>
+              <div class="contact-info-row">
+                <div class="icon-contact"><img src="Assets/icon/telefone.png" alt="telefone"></div>
+                <div>
+                  <div class="k">Telefone / WhatsApp</div>
+                  <div class="v">(19) 3013-1330 · (19) 99146-0273</div>
+                </div>
+              </div>
+              <div class="contact-info-row">
+                <div class="icon-contact"><img src="Assets/icon/central-de-atendimento.png" alt="Atendimento"></div>
+                <div>
+                  <div class="k">Atendimento</div>
+                  <div class="v">Segunda a sexta, 09:00 às 17:00</div>
+                </div>
+              </div>
+              <div class="contact-info-row">
+                <div class="icon-contact"><img src="Assets/icon/endereco.png" alt="endereço"></div>
+                <div>
+                  <div class="k">Endereço</div>
+                  <div class="v">
+                    Av. Rafael Vitta, 550 SL 9, Americana - SP
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="map-embed">
+              <a class="map-fallback"
+                href="https://www.google.com/maps/search/?api=1&query=Av.%20Rafael%20Vitta%2C%20550%20SL%209%2C%20Americana%20-%20SP"
+                target="_blank" rel="noopener">Ver localização no Google Maps</a>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3679.8350723208887!2d-47.33713302525235!3d-22.734370731730845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c89bcbad5fa7b9%3A0x1a2df3d9895ba244!2sAv.%20Rafael%20Vitta%2C%20550%20-%20Centro%2C%20Americana%20-%20SP%2C%2013465-420!5e0!3m2!1spt-BR!2sbr!4v1786894632485!5m2!1spt-BR!2sbr"
+                loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Localização InteragiTI"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container-narrow footer-main">
+      <div>
+        <a href="home.html" class="nav-logo nav-logo-original">
+          <img src="https://www.interagiti.com.br/site/images/logo-inverse-200x34.png" alt="InteragiTI" /></a>
+        <p>Soluções de TI completa para sua empresa</p>
+      </div>
+      <div class="footer-contact"><strong>Informações para contato</strong>
+        <span>Av. Rafael Vitta, 550 SL 9<br />Americana, SP</span>
+        <a href="mailto:interagiti@interagiti.com.br">interagiti@interagiti.com.br</a>
+        <a href="https://api.whatsapp.com/send?phone=551930131330" target="_blank" rel="noopener">(19) 3013-1330</a>
+        <span>Segunda a sexta: 09:00 às 17:00</span>
+      </div>
+      <nav class="footer-links" aria-label="Links do rodapé">
+        <strong>Links</strong><a href="index.html">Início</a><a href="sobrenos.html">Sobre nós</a><a
+          href="solucoes.html">Sistemas</a>
+        <a href="certificados.html">Certificados</a><a href="contato.html">Contato</a>
+      </nav>
+    </div>
+    <div class="container-narrow footer-bottom">
+      <span>© 2026 InteragiTI</span><span>· Tecnologia que resolve.</span>
+    </div>
+  </footer>
+  <script>
+    document
+      .getElementById("contactForm")
+      .addEventListener("submit", function (event) {
+        event.preventDefault();
+        const data = new FormData(this);
+        const message = `Olá! Meu nome é ${data.get("text")}.\nEmpresa: ${data.get("empresa") || "Não informada"}\nWhatsApp: ${data.get("whatsapp")}\n\nPreciso de ajuda com:\n${data.get("mensagem") || "Não informada"}`;
+        window.open(
+          `https://api.whatsapp.com/send?phone=551930131330&text=${encodeURIComponent(message)}`,
+          "_blank",
+          "noopener",
+        );
+      });
+  </script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

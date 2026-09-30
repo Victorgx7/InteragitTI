@@ -1,0 +1,365 @@
+.scroll-progress {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  transform: scaleX(0);
+  transform-origin: left;
+  background: linear-gradient(90deg, #0c1a31, #087fb9 55%, #4de0b3);
+  box-shadow: 0 1px 10px rgba(8, 127, 185, 0.55);
+  pointer-events: none;
+  will-change: transform;
+  inset-inline-start: 0;
+}
+
+.navigation-progress {
+  position: fixed;
+  z-index: 110;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  opacity: 0;
+  pointer-events: none;
+  background: var(--mint-dark, #10a87d);
+  box-shadow: 0 0 12px rgba(16, 168, 125, 0.55);
+  transition:
+    width 0.45s cubic-bezier(0.65, 0, 0.35, 1),
+    opacity 0.2s ease;
+}
+
+.navigation-progress.is-active {
+  width: 82%;
+  opacity: 1;
+}
+
+.site-nav {
+  transition: all 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+body {
+  animation: page-enter 0.45s cubic-bezier(0.65, 0, 0.35, 1) both;
+}
+
+body.is-leaving {
+  opacity: 0;
+  transition: opacity 0.45s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+@keyframes page-enter {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.site-nav.is-scrolled {
+  box-shadow: 0 10px 32px rgba(5, 69, 108, 0.22);
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition:
+    opacity 0.65s ease var(--reveal-delay, 0ms),
+    transform 0.65s cubic-bezier(0.2, 0.7, 0.2, 1) var(--reveal-delay, 0ms);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.site-footer.reveal.is-visible .footer-main,
+body>footer:not(.site-footer).reveal.is-visible .footer-main {
+  animation: footer-content-in 0.55s ease 0.12s both;
+}
+
+.site-footer.reveal.is-visible .footer-bottom,
+body>footer:not(.site-footer).reveal.is-visible .footer-bottom {
+  animation: footer-content-in 0.55s ease 0.24s both;
+}
+
+@keyframes footer-content-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.bento-card {
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.bento-card::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+  background: radial-gradient(260px circle at var(--pointer-x, 50%) var(--pointer-y, 50%),
+      rgba(255, 255, 255, 0.32),
+      transparent 48%);
+  transition: opacity 0.25s ease;
+}
+
+.bento-card:hover::before {
+  opacity: 1;
+}
+
+@media (max-width: 960px) {
+  .service-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .plans-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .plan-card {
+    padding: 30px 20px 26px;
+  }
+}
+
+@media (max-width: 620px) {
+  .service-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .service-card {
+    padding: 28px 22px 24px;
+    min-height: auto;
+  }
+}
+
+@media (max-width: 840px) {
+  .plans-grid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 32px;
+  }
+
+  .plan-card.featured {
+    transform: translateY(0);
+  }
+
+  .plan-card.featured:hover,
+  .plan-card.featured:focus-visible {
+    transform: translateY(-8px);
+  }
+}
+
+@media (max-width: 1000px) {
+  .segmentos-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+
+  .segmentos-header h2 {
+    font-size: 32px;
+  }
+
+  .segmentos-header p {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 768px) {
+  .segmentos {
+    padding: 65px 18px 70px;
+  }
+
+  .segmentos-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+
+  .segmento {
+    padding: 18px 10px 16px;
+    border-radius: 16px;
+  }
+
+  .segmento-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    margin-bottom: 12px;
+  }
+
+  .segmento-icon img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .segmento span {
+    font-size: 13px;
+  }
+
+  .segmentos-header h2 {
+    font-size: 28px;
+  }
+
+  .segmentos-header p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .segmentos-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .segmentos-header h2 {
+    font-size: 24px;
+  }
+
+  .segmentos-header p {
+    font-size: 15px;
+  }
+}
+
+.btn,
+.btn-primary-lg,
+.btn-nav-cta,
+.plan-cta {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::after,
+.btn-primary-lg::after,
+.btn-nav-cta::after,
+.plan-cta::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -110%;
+  width: 55%;
+  height: 100%;
+  transform: skewX(-20deg);
+  background: linear-gradient(90deg,
+      transparent,
+      rgba(255, 255, 255, 0.45),
+      transparent);
+  transition: left 0.55s ease;
+}
+
+.btn:hover::after,
+.btn-primary-lg:hover::after,
+.btn-nav-cta:hover::after,
+.plan-cta:hover::after {
+  left: 135%;
+}
+
+.form-control-custom {
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.form-control-custom:focus {
+  transform: translateY(-1px);
+}
+
+.is-submitting button[type="submit"] {
+  pointer-events: none;
+  opacity: 0.72;
+}
+
+.is-submitting button[type="submit"]::before {
+  content: "Enviando…";
+}
+
+@media (max-width: 768px) {
+  body.menu-open {
+    overflow: hidden;
+  }
+
+  body.menu-open::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 110;
+    background: rgba(3, 23, 41, 0.55);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    animation: menu-backdrop-in 0.24s ease both;
+    pointer-events: auto;
+  }
+
+  .site-nav {
+    z-index: 130;
+  }
+
+  @keyframes menu-backdrop-in {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+
+  body {
+    animation: none;
+  }
+
+  body.is-leaving {
+    opacity: 1;
+    transition: none;
+  }
+
+  .navigation-progress {
+    display: none;
+  }
+
+  .nav-links.open,
+  body.menu-open::after {
+    animation: none;
+  }
+
+  .interagi-mobile-whatsapp {
+    transition: none;
+  }
+
+  .nav-dropdown-toggle span {
+    animation: none !important;
+    transition: none;
+  }
+}
